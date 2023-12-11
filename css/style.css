@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container .content .side-content .header h1, .container .content .main-content .header h1 {
+  color: darkorchid;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+.container .navigation-header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+.container .navigation-header img {
+  max-height: 100%;
+}
+.container .navigation-header .navigation {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .navigation-header .navigation a {
+  color: black;
+  font-size: 20px;
+}
+.container .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .main-content {
+  width: 60%;
+}
+.container .content .main-content .header {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.container .content .main-content .content-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .main-content .content-container .text-box {
+  margin: 5px;
+  padding: 10px;
+  border: 2px dashed darkorchid;
+  border-radius: 10px;
+}
+.container .content .main-content .content-container img {
+  max-width: 20%;
+}
+.container .content .side-content {
+  width: 35%;
+}
+.container .content .side-content form fieldset {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed darkorchid;
+  border-radius: 10px;
+}
+.container .content .side-content form fieldset legend {
+  margin: auto;
+  color: darkorchid;
+}
+.container .content .side-content .header {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.container .content .side-content .content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .content .side-content .content-container .person {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px dashed darkorchid;
+  border-radius: 10px;
+}
+.container .content .side-content .content-container .person img {
+  height: 100px;
+  width: 100px;
+}
+.container .footer {
+  padding: 10px;
+  width: 100%;
+  border: 2px dashed darkorchid;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}

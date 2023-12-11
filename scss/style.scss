@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin space-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin border{
+	border: 2px dashed darkorchid;
+	border-radius: 10px;
+}
+
+%darkorchid{
+	color: darkorchid;
+}
+
+@mixin header {
+	.header {
+		width: 100%;
+		text-align: center;
+		h1 {
+			@extend %darkorchid;
+		}
+		$size: calculate-heading-size(6);
+  		font-size: $size;
+	}
+}
+
+@import "font-size.scss";
+
+@function calculate-heading-size($level) {
+  @if $level == 1 {
+    @return $base-font-size * 2.5;
+  } @else if $level == 2 {
+    @return $base-font-size * 2;
+  } @else if $level == 3 {
+    @return $base-font-size * 1.75;
+  } @else if $level == 4 {
+    @return $base-font-size * 1.5;
+  } @else if $level == 5 {
+    @return $base-font-size * 1.25;
+  } @else {
+    @return $base-font-size;
+  }
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+
+	.navigation-header{
+		@include space-between;
+		height: 70px;
+
+		img {
+			max-height: 100%;
+		}
+
+		.navigation {
+			width: 50%;
+			height: 100%;
+
+			@include space-between;
+			align-items: center;
+
+			a {
+				color: black;
+				font-size: 20px;
+			}
+		}
+	}	
+	
+	.content {
+		width: 100%;
+		@include space-between;
+
+		.main-content {
+			width: 60%;
+			@include header;
+
+			.content-container {
+				width: 100%;
+				@include space-between;
+
+				.text-box {
+					margin: 5px;
+					padding: 10px;
+					@include border;
+				}
+
+				img {
+					max-width: calc(100% / 5);
+				}
+			}
+
+		}
+		.side-content {
+			width: 35%;
+
+			form{
+				fieldset {
+					padding: 15px;
+					display: flex;
+					flex-direction: column;
+
+					@include border;
+
+					legend {
+						margin: auto;
+						color: darkorchid;
+					}
+				}
+			}
+
+			@include header;
+
+			.content-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				.person {
+					margin: 5px;
+					padding: 10px;
+
+					display: flex;
+					justify-content: space-between;
+					@include border;
+
+					img {
+						height: 100px;
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		padding: 10px;
+		width: 100%;
+
+		@include border;
+
+		font-size: 20px;
+		text-align: center;
+	}
+}
